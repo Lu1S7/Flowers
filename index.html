@@ -34,8 +34,91 @@
   </style>
 </head>
 <body>
-  <img src="https://i.pinimg.com/originals/49/31/21/493121d5a4b878c63f039d01416a5a22.gif" alt="Flores amarillas gif">
-  <h1>Espero tengas un buen día, Feliz Día de las Flores Amarillas Moshito de parte mío y de Simba💛</h1>
+
 </body>
 </html>
+
+
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Te Amo 🌼</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #fff8dc;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    h1 {
+      color: #e69f00;
+      font-size: 3em;
+      margin-top: 20px;
+      text-shadow: 1px 1px 3px #555;
+      position: relative;
+      z-index: 2;
+    }
+
+    img {
+      max-width: 90%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Animación de lluvia de flores */
+    .flower {
+      position: absolute;
+      top: -50px;
+      width: 30px;
+      height: 30px;
+      background-image: url('https://i.imgur.com/oL5Yf50.png'); /* Imagen de flor */
+      background-size: cover;
+      animation: fall linear infinite;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+      100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <img src="https://i.pinimg.com/originals/49/31/21/493121d5a4b878c63f039d01416a5a22.gif" alt="Flores amarillas gif">
+  <h1>Espero tengas un buen día, Feliz Día de las Flores Amarillas Moshito</h1>
+  <h1>de parte mío y de Simba💛</h1>
+
+  <script>
+    function createFlower() {
+      const flower = document.createElement("div");
+      flower.classList.add("flower");
+      document.body.appendChild(flower);
+
+      // Posición aleatoria en la parte superior
+      flower.style.left = Math.random() * window.innerWidth + "px";
+      flower.style.animationDuration = (Math.random() * 3 + 2) + "s"; // Diferentes velocidades
+      
+      setTimeout(() => { flower.remove(); }, 5000); // Eliminar después de caer
+    }
+
+    setInterval(createFlower, 300); // Crear flores constantemente
+  </script>
+</body>
+</html>
+
 
